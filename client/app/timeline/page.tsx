@@ -32,12 +32,6 @@ const TimeLine = () => {
             id: `Project-${project.id}`,
             type: "project" as TaskTypeItems,
             progress: 50 ,
-            styles: {
-                backgroundColor: isDarkMode ? "#3b82f6" : "#3b82f6",
-                backgroundSelectedColor: isDarkMode ? "#2563eb" : "#1d4ed8",
-                progressColor: isDarkMode ? "#1e40af" : "#1e3a8a",
-                progressSelectedColor: isDarkMode ? "#1e3a8a" : "#1e3a8a",
-            },
             isDisabled: false,
         })) || []
     }, [projects])

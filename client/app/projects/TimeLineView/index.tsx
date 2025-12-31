@@ -41,12 +41,6 @@ const TimeLine = ({id, setIsModalNewTaskOpen}: Props) => {
             id: `Task-${task.id}`,
             type: "task" as TaskTypeItems, // Use "task" not "tasks"
             progress: task.points ? (task.points / 10) * 100 : 0,
-            styles: {
-                backgroundColor: isDarkMode ? "#3b82f6" : "#3b82f6",
-                backgroundSelectedColor: isDarkMode ? "#2563eb" : "#1d4ed8",
-                progressColor: isDarkMode ? "#1e40af" : "#1e3a8a",
-                progressSelectedColor: isDarkMode ? "#1e3a8a" : "#1e3a8a",
-            },
             isDisabled: false,
         })) || []
     }, [tasks])
