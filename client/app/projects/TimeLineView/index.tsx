@@ -30,7 +30,7 @@ const TimeLine = ({id, setIsModalNewTaskOpen}: Props) => {
     
     const [displayOptions, setDisplayOptions] = useState<DisplayOption>({
         viewMode: ViewMode.Month,
-        locale: "en-US",
+        // locale: "en-US",
     })
 
     const ganttTasks = useMemo(() => {
@@ -101,7 +101,7 @@ const TimeLine = ({id, setIsModalNewTaskOpen}: Props) => {
                         <Gantt
                             tasks={ganttTasks}
                             viewMode={displayOptions.viewMode}
-                            locale={displayOptions.locale}
+                            // locale={displayOptions.locale}
                             columnWidth={displayOptions.viewMode === ViewMode.Month ? 150 : 100}
                             listCellWidth="155px"
                             fontSize="14"
