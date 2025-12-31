@@ -92,16 +92,18 @@ const TimeLine = ({id, setIsModalNewTaskOpen}: Props) => {
                     minHeight: '400px',
                 }}>
                     {ganttTasks.length > 0 ? (
-                        <Gantt
-                            tasks={ganttTasks}
-                            viewMode={displayOptions.viewMode}
-                            // locale={displayOptions.locale}
-                            columnWidth={displayOptions.viewMode === ViewMode.Month ? 150 : 100}
-                            listCellWidth="155px"
-                            fontSize="14"
-                            rowHeight={50}
-                            headerHeight={50}
-                        />
+                <Gantt
+                    tasks={ganttTasks}
+                    viewMode={displayOptions.viewMode}
+                    {...({
+                        columnWidth: displayOptions.viewMode === ViewMode.Month ? 150 : 100,
+                        listCellWidth: "155px",
+                        fontSize: "14",
+                        rowHeight: 50,
+                        headerHeight: 50,
+                    } as any)}
+                    projectBackgroundColor={isDarkMode}
+                />
                     ) : (
                         <div className="flex h-64 items-center justify-center">
                             <p className="text-gray-500 dark:text-gray-400">
